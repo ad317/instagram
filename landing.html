@@ -2,117 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Login Help - Instagram Style</title>
+  <title>NOEMIE Arc-en-ciel</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Arial&display=swap');
+
     body {
       background-color: #000;
-      color: #fff;
-      font-family: Arial, sans-serif;
+      margin: 0;
+      height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      font-size: 10vw;
+      font-weight: bold;
+      background: linear-gradient(90deg, 
+        red, orange, yellow, green, blue, indigo, violet);
+      background-size: 400% 400%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+              background-clip: text;
+              text-fill-color: transparent;
+      animation: rainbow 8s ease infinite;
+      text-align: center;
+      user-select: none;
       margin: 0;
     }
 
-    .container {
-      background-color: #111;
-      padding: 40px;
-      border-radius: 10px;
-      text-align: center;
-      width: 350px;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-    }
-
-    .icon-lock {
-      font-size: 48px;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      margin: 10px 0;
-    }
-
-    p {
-      font-size: 14px;
-      color: #ccc;
-      margin-bottom: 20px;
-    }
-
-    input[type="text"], input[type="password"] {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: none;
-      border-radius: 5px;
-      background-color: #222;
-      color: #fff;
-    }
-
-    button {
-      background-color: #385185;
-      color: #fff;
-      padding: 10px;
-      width: 100%;
-      border: none;
-      border-radius: 5px;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    button:hover {
-      background-color: #4c6ef5;
-    }
-
-    .footer-text {
-      margin-top: 15px;
-      font-size: 13px;
-      color: #aaa;
-    }
-
-    .error-message {
-      color: red;
-      margin-top: 10px;
+    @keyframes rainbow {
+      0%{background-position:0% 50%;}
+      50%{background-position:100% 50%;}
+      100%{background-position:0% 50%;}
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="icon-lock">🔒</div>
-
-    <h2>Having trouble logging in?</h2>
-
-    <p>
-      Enter your email address, phone number, or username, along with your previous password.
-      We'll send you a link to get back into your account.
-    </p>
-
-    <form onsubmit="checkLogin(event)">
-      <input id="username" placeholder="Email, phone number, or username" required type="text" />
-      <input id="password" placeholder="Previous password" required type="password" />
-      <button type="submit">Send login link</button>
-      <div id="error" class="error-message"></div>
-    </form>
-
-    <div class="footer-text">Can't reset your password?</div>
-  </div>
-
-  <script>
-    function checkLogin(event) {
-      event.preventDefault(); // Empêche la soumission du formulaire
-
-      const username = document.getElementById("username").value;
-      const password = document.getElementById("password").value;
-      const errorDiv = document.getElementById("error");
-
-      if (username === "admin" && password === "admin") {
-        // Redirection vers welcome.html
-        window.location.href = "welcome.html";
-      } else {
-        // Afficher message d'erreur
-        errorDiv.textContent = "Incorrect username or password.";
-      }
-    }
-  </script>
+  <h1>NOEMIE</h1>
 </body>
 </html>
